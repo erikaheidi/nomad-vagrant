@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+
+    config.vm.box = "hashicorp/precise64"
+
+    config.vm.provision "shell", inline: "echo Hello World! Im a shell inline provisioner."
+
+    config.vm.post_up_message = "Hello World! Im a post-up message."
+
+end
